@@ -11,7 +11,7 @@ data = []
 while (i<60):
         f = open("emaillist.txt","a")
         #Google Dork used here: [intext:"gmail.com" site:linkedin.com], for changing the page like in Google we chaged the page number, I used "i" variable for that.
-        page = requests.get("https://www.google.com/search?q=intext:%22gmail.com%22+site:linkedin.com&sxsrf=ALeKk01cBkyaitS1ypoG5y5oPKU3SKPz4w:1617967532812&ei=rDlwYPGGMf-d4-EPvMu4wAU&start="+str(i)+"&sa=N&ved=2ahUKEwjxjLTghvHvAhX_zjgGH>
+        page = requests.get("https://www.google.com/search?q=intext:%22gmail.com%22+site:linkedin.com&sxsrf=ALeKk01cBkyaitS1ypoG5y5oPKU3SKPz4w:1617967532812&ei=rDlwYPGGMf-d4-EPvMu4wAU&start="+str(i)+"&sa=N&ved=2ahUKEwjxjLTghvHvAhX_zjgGH")
         soup = BeautifulSoup(page.content, 'html.parser')
         page_body = soup.body
         text = str(page_body)
